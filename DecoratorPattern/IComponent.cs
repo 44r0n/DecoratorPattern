@@ -3,5 +3,6 @@ namespace DecoratorPattern
 {
     public interface IComponent
     {
+        void Operation();
     }
 }

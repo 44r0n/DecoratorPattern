@@ -1,10 +1,19 @@
 ﻿using System;
 namespace DecoratorPattern
 {
-    public class Decorator
+    public abstract class Decorator : IComponent
     {
-        public Decorator()
+        private IComponent _component;
+
+        public Decorator(IComponent component)
         {
+            this._component = component;
+        }
+
+        public virtual void Operation()
+        {
+            Console.WriteLine("From Decorator");
+            _component.Operation();
         }
     }
 }

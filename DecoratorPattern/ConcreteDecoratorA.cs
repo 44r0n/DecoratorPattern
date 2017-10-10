@@ -1,10 +1,17 @@
 ﻿using System;
 namespace DecoratorPattern
 {
-    public class ConcreteDecoratorA
+    public class ConcreteDecoratorA : Decorator
     {
-        public ConcreteDecoratorA()
+
+        public ConcreteDecoratorA(IComponent component) : base(component)
         {
+        }
+
+        public override void Operation()
+        {
+            Console.WriteLine("From ConcreteDecoratorA");
+            base.Operation();
         }
     }
 }
